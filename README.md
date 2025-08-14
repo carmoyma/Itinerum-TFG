@@ -22,4 +22,4 @@ You can also save your itineraries and check them later.
 1. Clone this repo  
 2. Place it in your local server folder (e.g., `htdocs` in XAMPP)  
 3. Import the `.sql` file from `/db` into MySQL  
-4. Start your local server and visit:  
+4. Start your local server and visit:  http://localhost/Itinerum
