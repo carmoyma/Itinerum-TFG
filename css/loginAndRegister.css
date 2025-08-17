@@ -1,0 +1,48 @@
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes moveDiagonalXDown {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(-28.9554%);
+  }
+}
+
+@keyframes moveDiagonalXUp {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  100% {
+    transform: translate(-13.9554%);
+  }
+}
+
+.moveDiagonalXDown {
+  width: 400px; /* tamaño que quieres para que crezca */
+  flex-shrink: 0;
+  animation: moveDiagonalXDown 10s linear infinite;
+}
+
+.moveDiagonalXDown img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.moveDiagonalXUp {
+  width: 400px; /* tamaño que quieres para que crezca */
+  flex-shrink: 0;
+  animation: moveDiagonalXUp 10s linear infinite;
+}
+
+.moveDiagonalXUp img {
+  width: 100%;
+  height: auto;
+  display: block;
+}

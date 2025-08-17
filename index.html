@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Explore Málaga</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <link rel="stylesheet" href="css/family.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const video = document.getElementById("parallax-video");
+        video.style.transform = `translateY(${-scrollY * 0.25}px)`;
+      });
+    </script>
+    <script>
+  tailwind.config = {
+    darkMode: 'class'
+  }
+</script>
+  </head>
+  <body class="bg-white dark:bg-black text-gray-800 font-sans m-0 p-0">
+    <main>
+      <header class="sticky top-0 z-10 w-full bg-white/80 backdrop-blur-xl shadow-sm"></header>
+
+      <section class="relative flex flex-col justify-center items-center text-center text-white overflow-hidden" style="height: 100vh">
+        <img id="parallax-video" src="assets/img/playamalaga.png" alt="Background image" style="width: 100%; height: auto; display: block;" />
+        <h1 class="text-5xl mb-4 font-bold text-shadow">Explore Málaga</h1>
+        <p class="text-lg max-w-xl mx-auto mb-8 text-shadow">
+          Discover your ideal itinerary based on your interests, time, and travel style.
+        </p>
+        <a href="itinerarios.html">
+          <button class="bg-black text-white hover:bg-[hsl(0,0%,15%)] hover:text-white py-2 px-4 rounded-full">
+            Create your itinerary
+          </button>
+        </a>
+        <div id="scroll-arrow" class="mt-10 animate-bounce cursor-pointer" title="Go to next content">
+          <svg class="w-8 h-8 mx-auto text-black" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </div>
+      </section>
+
+      <section class="flex flex-col justify-center items-center p-10 bg-white">
+        <h2 class="text-3xl font-bold text-gray-900 mb-10 tracking-tight text-center">
+          Organize your adventure
+        </h2>
+
+        <div class="flex justify-center gap-6 items-stretch divide-x divide-gray-200 border-gray-200 overflow-hidden bg-white">
+          <div class="w-64 flex flex-col items-center justify-start p-6 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-black mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A2 2 0 013 15.382V5.618a2 2 0 011.553-1.948L9 2m0 0l6 3m0 0l5.447 2.724A2 2 0 0121 8.618v9.764a2 2 0 01-1.553 1.948L15 22m0 0l-6-3" />
+            </svg>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">Explore routes</h3>
+            <p class="text-sm text-gray-600">Discover new itineraries around the world.</p>
+          </div>
+
+          <div class="w-64 flex flex-col items-center justify-start p-6 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-black mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 20h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v11a2 2 0 002 2z" />
+            </svg>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">Plan your trip</h3>
+            <p class="text-sm text-gray-600">Organize your days with our integrated calendar.</p>
+          </div>
+
+          <div class="w-64 flex flex-col items-center justify-start p-6 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-black mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 2h6a2 2 0 012 2v2H7V4a2 2 0 012-2zM3 6h18M5 6v14a2 2 0 002 2h10a2 2 0 002-2V6" />
+            </svg>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">Pack your bags</h3>
+            <p class="text-sm text-gray-600">Save lists of what you need to bring.</p>
+          </div>
+
+          <div class="w-64 flex flex-col items-center justify-start p-6 text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-black mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c1.657 0 3-1.343 3-3S13.657 5 12 5s-3 1.343-3 3 1.343 3 3 3zm0 0c3.866 0 7 3.582 7 8H5c0-4.418 3.134-8 7-8z" />
+            </svg>
+            <h3 class="text-lg font-semibold text-gray-900 mb-1">Saved places</h3>
+            <p class="text-sm text-gray-600">Quick access to your favorite destinations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="min-h-screen flex flex-col justify-center items-center bg-white py-20 px-6">
+        <div class="max-w-7xl mx-auto text-center w-full">
+          <h2 class="text-4xl font-extrabold text-gray-900 mb-12">What our travelers say</h2>
+          <div class="flex flex-col md:flex-row md:space-x-8 space-y-12 md:space-y-0 max-w-5xl mx-auto">
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center max-w-md mx-auto w-full md:w-80 min-h-[24rem]">
+              <img class="w-24 h-24 rounded-full mb-6 object-cover" src="https://randomuser.me/api/portraits/women/68.jpg" alt="Testimonial 1" />
+              <p class="text-gray-700 mb-6 italic flex-grow">
+                "Thanks to this platform I was able to organize my trip to Europe stress-free. The interface is super intuitive and the recommendations were perfect."
+              </p>
+              <h3 class="font-semibold text-lg text-gray-900">María López</h3>
+              <span class="text-sm text-gray-500">Madrid, Spain</span>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center max-w-md mx-auto w-full md:w-80 min-h-[24rem]">
+              <img class="w-24 h-24 rounded-full mb-6 object-cover" src="https://randomuser.me/api/portraits/men/75.jpg" alt="Testimonial 2" />
+              <p class="text-gray-700 mb-6 italic flex-grow">
+                "The favorite places feature was a lifesaver during my trip. Planning itineraries is now much easier."
+              </p>
+              <h3 class="font-semibold text-lg text-gray-900">Carlos Pérez</h3>
+              <span class="text-sm text-gray-500">Buenos Aires, Argentina</span>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center max-w-md mx-auto w-full md:w-80 min-h-[24rem]">
+              <img class="w-24 h-24 rounded-full mb-6 object-cover" src="https://randomuser.me/api/portraits/women/12.jpg" alt="Testimonial 3" />
+              <p class="text-gray-700 mb-6 italic flex-grow">
+                "I loved the ability to create personalized packing lists. Definitely the best app for frequent travelers."
+              </p>
+              <h3 class="font-semibold text-lg text-gray-900">Ana Martínez</h3>
+              <span class="text-sm text-gray-500">Mexico City, Mexico</span>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-lg flex flex-col items-center text-center max-w-md mx-auto w-full md:w-80 min-h-[24rem]">
+              <img class="w-24 h-24 rounded-full mb-6 object-cover" src="https://unavatar.io/@sanchezcastejon" alt="Pedro Sánchez" />
+              <p class="text-gray-700 mb-6 italic flex-grow">
+                "Thanks to Itinerum I was able to organize my trip easily and effectively. The tools helped me plan routes, manage my packing and save my favorite places. Highly recommended!"
+              </p>
+              <h3 class="font-semibold text-lg text-gray-900">Pedro Sánchez</h3>
+              <span class="text-sm text-gray-500">Madrid, Spain</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="mt-32 bg-black text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-sm">
+          <div class="col-span-2">
+            <p class="text-gray-400">Plan your best trips with Itinerum</p>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <a href="#" class="hover:underline">About Us</a>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <a href="mailto:contactitinerum@gmail.com" class="hover:underline">Contact</a>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <a href="https://x.com/@PlanItinerum" class="hover:underline">X (Twitter)</a>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 my-8"></div>
+
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-4">
+          <p>© Itinerum 2025. All rights reserved</p>
+          <div class="flex space-x-4">
+            <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+            <a href="terms.html" class="hover:underline">Terms</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script>
+      function smoothScroll(target, duration = 800) {
+        const start = window.scrollY;
+        const end = target.getBoundingClientRect().top + window.scrollY;
+        const distance = end - start;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (!startTime) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+
+          const ease = progress < 0.5
+            ? 2 * progress * progress
+            : -1 + (4 - 2 * progress) * progress;
+
+          window.scrollTo(0, start + distance * ease);
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          }
+        }
+
+        requestAnimationFrame(animation);
+      }
+
+      document.getElementById('scroll-arrow').addEventListener('click', () => {
+        const arrow = document.getElementById('scroll-arrow');
+        arrow.style.display = 'none';
+
+        const secondSection = document.querySelectorAll('section')[1];
+        smoothScroll(secondSection, 800);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscriptions – Itinerum</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/family.css" />
+    <script src="js/navbar.js"></script>
+    <script src="js/dropdown.js"></script>
+    <script src="js/cardSub.js"></script>
+    <script src="js/accordion.js"></script>
+  </head>
+  <body class="bg-white text-gray-900">
+    <div class="isolate mx-auto flex max-w-[3840px] flex-col bg-white">
+      <header
+        class="sticky top-0 z-10 w-full bg-white/80 backdrop-blur-xl shadow-sm"></header>
+
+      <main class="flex grow flex-col">
+        <section class="pt-20 pb-20 text-center px-4">
+          <h1 class="text-5xl font-bold tracking-tight">
+            Plan your trips like a Pro.
+          </h1>
+          <p class="mt-6 text-lg text-gray-600 max-w-xl mx-auto">
+            Get full access to all features from only €0.19 per day —
+            <span class="text-gray-500">Cancel anytime.</span>
+          </p>
+        </section>
+        <section
+          class="grid gap-8 max-w-2xl mx-auto px-4 grid-cols-1 sm:grid-cols-2 justify-center">
+          <div
+            class="flex flex-col justify-between rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+            <div>
+              <h2 class="text-sm font-semibold text-gray-500">Free</h2>
+              <p class="mt-2 text-3xl font-bold">
+                €0<span class="text-base font-medium text-gray-500">/mo</span>
+              </p>
+              <p class="mt-4 text-sm text-gray-600">
+                Perfect for individuals trying out Itinerum.
+              </p>
+              <ul class="mt-6 space-y-3 text-sm text-gray-700">
+                <li>1 active itinerary</li>
+                <li>Basic destination access</li>
+                <li>No priority support</li>
+              </ul>
+            </div>
+            <div id="free-plan-action" class="mt-8"></div>
+          </div>
+          <div
+            class="flex flex-col justify-between rounded-2xl border border-black bg-black p-8 text-white shadow-lg ring-1 ring-black">
+            <div>
+              <h2 class="text-sm font-semibold text-white/70">Pro</h2>
+              <p class="mt-2 text-3xl font-bold">
+                €5.99<span class="text-base font-medium text-white/70">/mo</span>
+              </p>
+              <p class="mt-4 text-sm text-white/80">
+                Best for frequent travelers who want full features.
+              </p>
+              <ul class="mt-6 space-y-3 text-sm text-white">
+                <li>Unlimited itineraries</li>
+                <li>Full destination access</li>
+                <li>Priority support</li>
+              </ul>
+            </div>
+            <div id="pro-plan-action" class="mt-8"></div>
+          </div>
+        </section>
+
+        <section class="max-w-2xl mx-auto mt-32 px-4">
+          <h2 class="text-2xl font-bold mb-6 text-center">
+            Preguntas frecuentes
+          </h2>
+          <div class="space-y-4">
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                onclick="toggleAccordion('faq1')"
+                class="w-full text-left px-4 py-4 font-medium hover:bg-gray-50">
+                ¿Puedo cancelar en cualquier momento?
+              </button>
+              <div
+                id="faq1"
+                class="transition-all duration-300 max-h-0 overflow-hidden opacity-0 px-4 text-sm text-gray-600">
+                Sí, puedes cancelar tu suscripción en cualquier momento desde tu
+                perfil. Tu acceso permanecerá activo hasta el final del período
+                de facturación, y no se aplicarán cargos posteriores.
+              </div>
+            </div>
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                onclick="toggleAccordion('faq2')"
+                class="w-full text-left px-4 py-4 font-medium hover:bg-gray-50">
+                ¿Qué sucede al finalizar la prueba gratuita?
+              </button>
+              <div
+                id="faq2"
+                class="transition-all duration-300 max-h-0 overflow-hidden opacity-0 px-4 text-sm text-gray-600"
+              >
+                Una vez que finalicen tus 7 días de prueba gratuita, recibirás
+                una notificación para que elijas un plan de pago. Si decides no
+                actualizar, tu cuenta volverá automáticamente al plan gratuito.
+              </div>
+            </div>
+            <div class="border rounded-lg overflow-hidden">
+              <button
+                onclick="toggleAccordion('faq3')"
+                class="w-full text-left px-4 py-4 font-medium hover:bg-gray-50"
+              >
+                ¿Hay descuentos para estudiantes o equipos?
+              </button>
+              <div
+                id="faq3"
+                class="transition-all duration-300 max-h-0 overflow-hidden opacity-0 px-4 text-sm text-gray-600"
+              >
+                Sí, ofrecemos descuentos especiales tanto para estudiantes como
+                para organizaciones. Puedes contactarnos a través del formulario
+                de soporte y te enviaremos los detalles junto con los requisitos
+                para acceder al beneficio.
+              </div>
+            </div>
+          </div>
+        </section>
+
+              <footer class="mt-32 bg-black text-white py-12 px-6">
+        <div
+          class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-8 text-sm">
+          <div class="col-span-2">
+            <p class="text-gray-400">Plan your best trips with Itinerum</p>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <a href="#" class="hover:underline">About Us</a>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <a href="mailto:contactitinerum@gmail.com" class="hover:underline">Contact</a>
+          </div>
+
+          <div class="flex flex-col space-y-2">
+            <a href="https://x.com/@PlanItinerum"; class="hover:underline">X(Twitter)</a>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 my-8"></div>
+
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-4">
+          <p>© Itinerum 2025. All rights reserved</p>
+          <div class="flex space-x-4">
+            <a href="privacy.html" class="hover:underline">Privacy Policy</a>
+            <a href="terms.html" class="hover:underline">Terms</a>
+          </div>
+        </div>
+      </footer>
+      </main>
+    </div>
+  </body>
+</html>
