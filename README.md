@@ -9,16 +9,18 @@ You can also save your itineraries and check them later.
 - Create a personalized itinerary from the search results
 - Save itineraries to the database
 - View previously saved itineraries
-- Simple and clean interface for both desktop and mobile
+- Simple and clean interface for desktop
 
 ## Tech used
 - **HTML5** – Structure and content  
-- **CSS3** – Styles and responsive design  
+- **CSS3 + Tailwind CSS** – Styles, responsive design, and utility-first framework  
 - **JavaScript** – Dynamic search and interactivity  
 - **PHP** – Server-side logic and database interaction  
 - **MySQL** – Store itineraries and places of interest  
+- **Google Maps API** – Display points of interest on an interactive map  
 
 ## How to try it
 1. Clone this repo  
    ```bash
    git clone https://github.com/carmoyma/Itinerum-TFG.git
+
